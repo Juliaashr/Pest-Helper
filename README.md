@@ -14,8 +14,8 @@ For correct operation of application you need to install Microsoft Visual Studio
 
 In detail about project classes:
 
-class Users allows to enter your login and password and if you are in the database, then get access;
-class Service allows to hide or unhide files;
+-class Users allows to enter your login and password and if you are in the database, then get access;
+-class Service allows to hide or unhide files;
 
 ## Authors
 
