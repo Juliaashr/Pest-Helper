@@ -21,7 +21,7 @@ namespace Pest_Helper
 
                 Users user = new Users(Console.ReadLine(), Console.ReadLine());
 
-                user?.Accsess(directory);
+                UsersRepository.Accsess(directory, user);
             }
             else
                 Console.WriteLine("Директории не существует!");
