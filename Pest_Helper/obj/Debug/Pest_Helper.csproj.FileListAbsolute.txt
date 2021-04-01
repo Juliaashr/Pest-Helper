@@ -5,3 +5,10 @@ C:\Users\admin\source\repos\Pest_Helper\Pest_Helper\obj\Debug\Pest_Helper.csproj
 C:\Users\admin\source\repos\Pest_Helper\Pest_Helper\obj\Debug\Pest_Helper.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\Pest_Helper\Pest_Helper\obj\Debug\Pest_Helper.exe
 C:\Users\admin\source\repos\Pest_Helper\Pest_Helper\obj\Debug\Pest_Helper.pdb
+C:\Users\admin\Source\Repos\Pest-Helper\Pest_Helper\bin\Debug\Pest_Helper.exe.config
+C:\Users\admin\Source\Repos\Pest-Helper\Pest_Helper\bin\Debug\Pest_Helper.exe
+C:\Users\admin\Source\Repos\Pest-Helper\Pest_Helper\bin\Debug\Pest_Helper.pdb
+C:\Users\admin\Source\Repos\Pest-Helper\Pest_Helper\obj\Debug\Pest_Helper.csprojAssemblyReference.cache
+C:\Users\admin\Source\Repos\Pest-Helper\Pest_Helper\obj\Debug\Pest_Helper.csproj.CoreCompileInputs.cache
+C:\Users\admin\Source\Repos\Pest-Helper\Pest_Helper\obj\Debug\Pest_Helper.exe
+C:\Users\admin\Source\Repos\Pest-Helper\Pest_Helper\obj\Debug\Pest_Helper.pdb

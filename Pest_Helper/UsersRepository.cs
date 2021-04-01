@@ -9,7 +9,11 @@ namespace Pest_Helper
 {
     class UsersRepository
     {
-        public static void Accsess(DirectoryInfo directory, Users user)
+        public IUser User { get; set; }
+
+        public UsersRepository(IUser user) => User = user;
+
+        public void Accsess(DirectoryInfo directory)
         {
             Dictionary<string, string> logPass = new Dictionary<string, string>(5);
 
@@ -19,27 +23,25 @@ namespace Pest_Helper
             logPass.Add("zentrum", "AfRiKa");
             logPass.Add("ilikedogs777", "andcats");
 
-            if(logPass != null)
-                foreach (var item in logPass)
-                        if (user?.Login == item.Key && user?.Password == item.Value)
-                            FileControl(directory, user);
-            else
-                 Console.WriteLine("Пользователей с доступом не существует!");
+
+             foreach (var item in logPass)
+                if (User?.Login == item.Key && User?.Password == item.Value)
+                {
+                    Console.WriteLine($"Здравствуйте, {User.Login}, вы получили доступ. Нажмите 1, чтобы скрыть файлы; нажмите 2, чтобы показать скрытые файлы: ");
+
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            Service.Pest(directory);
+                            break;
+                        case "2":
+                            Service.Help(directory);
+                            break;
+                    }
+
+                }
+                            
         }
 
-        public static void FileControl(DirectoryInfo directory, Users user)
-        {
-            Console.WriteLine($"Здравствуйте, {user.Login}, вы получили доступ. Нажмите 1, чтобы скрыть файлы; нажмите 2, чтобы показать скрытые файлы: ");
-
-            switch (Console.ReadLine())
-            {
-                case "1":
-                    Service.Pest(directory);
-                    break;
-                case "2":
-                    Service.Help(directory);
-                    break;
-            }
-        }
     }
 }
