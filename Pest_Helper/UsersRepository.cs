@@ -20,7 +20,7 @@ namespace Pest_Helper
                      new Users("ilikedogs777", "andcats")};
         }
 
-        public static void Accsess(DirectoryInfo directory, Users user)
+        public void Accsess(DirectoryInfo directory, Users user)
         {
              foreach (var item in Users)
                 if (user == item)
