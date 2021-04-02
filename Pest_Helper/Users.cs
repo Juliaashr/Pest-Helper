@@ -17,6 +17,6 @@ namespace Pest_Helper
 
         public static bool operator ==(Users first, Users second) => first.Login.Equals(second.Login) && first.Password.Equals(second.Password);
 
-        public static bool operator !=(Users first, Users second) => !(first.Login.Equals(second.Login) && first.Password.Equals(second.Password));
+        public static bool operator !=(Users first, Users second) => !first.Login.Equals(second.Login) || !first.Password.Equals(second.Password);
     }
 }
