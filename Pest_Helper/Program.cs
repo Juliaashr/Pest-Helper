@@ -19,9 +19,7 @@ namespace Pest_Helper
             {
                 Console.WriteLine("Введите логин и пароль: ");
 
-                UsersRepository repository = new UsersRepository(new Users(Console.ReadLine(), Console.ReadLine()));
-
-                repository.Accsess(directory);
+                UsersRepository.Accsess(directory, new Users(Console.ReadLine(), Console.ReadLine()));
             }
             else
                 Console.WriteLine("Директории не существует!");

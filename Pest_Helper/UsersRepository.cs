@@ -9,25 +9,23 @@ namespace Pest_Helper
 {
     class UsersRepository
     {
-        public IUser User { get; set; }
+        public Users[] Users { get; set; }
 
-        public UsersRepository(IUser user) => User = user;
+        public UsersRepository()
+        { 
+            Users = new Users [] { new Users("anna2001", "qwe123qwe123"), 
+                     new Users("qwerty", "123_ytrewq"), 
+                     new Users("maldivi2007", "12345678"), 
+                     new Users("zentrum", "AfRiKa"), 
+                     new Users("ilikedogs777", "andcats")};
+        }
 
-        public void Accsess(DirectoryInfo directory)
+        public static void Accsess(DirectoryInfo directory, Users user)
         {
-            Dictionary<string, string> logPass = new Dictionary<string, string>(5);
-
-            logPass.Add("anna2001", "qwe123qwe123");
-            logPass.Add("qwerty", "123_ytrewq");
-            logPass.Add("maldivi2007", "12345678");
-            logPass.Add("zentrum", "AfRiKa");
-            logPass.Add("ilikedogs777", "andcats");
-
-
-             foreach (var item in logPass)
-                if (User?.Login == item.Key && User?.Password == item.Value)
+             foreach (var item in Users)
+                if (user == item)
                 {
-                    Console.WriteLine($"Здравствуйте, {User.Login}, вы получили доступ. Нажмите 1, чтобы скрыть файлы; нажмите 2, чтобы показать скрытые файлы: ");
+                    Console.WriteLine($"Здравствуйте, {user.Login}, вы получили доступ. Нажмите 1, чтобы скрыть файлы; нажмите 2, чтобы показать скрытые файлы: ");
 
                     switch (Console.ReadLine())
                     {
@@ -40,7 +38,6 @@ namespace Pest_Helper
                     }
 
                 }
-                            
         }
 
     }
