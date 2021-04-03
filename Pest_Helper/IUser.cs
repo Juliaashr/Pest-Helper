@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pest_Helper
 {
-    interface IUser
+    public interface IUser
     {
         string Login { get; set; }
 
         string Password { get; set; }
+
     }
 }

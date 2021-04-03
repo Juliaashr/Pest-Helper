@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pest_Helper
 {
-    class Users: IUser
+    class Users : IUser
     {
         public string Login { get; set; }
 

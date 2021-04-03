@@ -9,7 +9,7 @@ namespace Pest_Helper
 {
     class UsersRepository
     {
-        public Users[] Users { get; set; }
+        public IUser[] Users { get; set; }
 
         public UsersRepository()
         { 
@@ -20,23 +20,14 @@ namespace Pest_Helper
                      new Users("ilikedogs777", "andcats")};
         }
 
-        public void Accsess(DirectoryInfo directory, Users user)
+        public void Accsess(DirectoryInfo directory, IUser user)
         {
              foreach (var item in Users)
-                if (user == item)
+                if ((Users)user == (Users)item)
+
                 {
                     Console.WriteLine($"Здравствуйте, {user.Login}, вы получили доступ. Нажмите 1, чтобы скрыть файлы; нажмите 2, чтобы показать скрытые файлы: ");
-
-                    switch (Console.ReadLine())
-                    {
-                        case "1":
-                            Service.Pest(directory);
-                            break;
-                        case "2":
-                            Service.Help(directory);
-                            break;
-                    }
-
+                    Service.FileControl(directory, Console.ReadLine());
                 }
         }
 

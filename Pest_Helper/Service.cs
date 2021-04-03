@@ -9,25 +9,26 @@ namespace Pest_Helper
 {
     class Service
     {
-        public static void Pest(DirectoryInfo directory)
+        public static void FileControl(DirectoryInfo directory, string helpVal)
         {
             foreach (FileInfo item in directory.GetFiles())
             {
-                if(item.Extension.Equals(".txt"))
-                    item.Attributes = FileAttributes.Hidden;
+                switch (helpVal)
+                {
+                    case "1":
+                        if (item.Extension.Equals(".txt"))
+                            item.Attributes = FileAttributes.Hidden;
+
+                        Console.WriteLine("Все файлы с расширением '.txt' скрыты.");
+
+                        break;
+                    case "2":
+
+                        item.Attributes = FileAttributes.Normal;
+                        Console.WriteLine("Все скрытые файлы видны!");
+                        break;
+                }
             }
-
-            Console.WriteLine("Все файлы с расширением '.txt' скрыты.");
-        }
-
-        public static void Help(DirectoryInfo directory)
-        {
-            foreach (FileInfo item in directory.GetFiles())
-            {
-                item.Attributes = FileAttributes.Normal;
-            }
-
-            Console.WriteLine("Все скрытые файлы видны!");
         }
     }
 }
