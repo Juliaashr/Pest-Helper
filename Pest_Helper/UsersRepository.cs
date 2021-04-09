@@ -22,12 +22,12 @@ namespace Pest_Helper
 
         public void Accsess(DirectoryInfo directory, IUser user)
         {
-           foreach (var item in Users)
-             if ((Users)user == (Users)item)
-             {
-                 Console.WriteLine($"Здравствуйте, {user.Login}, вы получили доступ. Нажмите 1, чтобы скрыть файлы; нажмите 2, чтобы показать скрытые файлы: ");
-                 Service.FileControl(directory, Console.ReadLine());
-             }
+            foreach (var item in Users)
+                if (user.Equals(item))
+                {
+                    Console.WriteLine($"Здравствуйте, {user.Login}, вы получили доступ. Нажмите 1, чтобы скрыть файлы; нажмите 2, чтобы показать скрытые файлы: ");
+                    Service.FileControl(directory);
+                }
         }
 
     }

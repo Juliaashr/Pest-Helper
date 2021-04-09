@@ -15,8 +15,8 @@ namespace Pest_Helper
 
         public Users(string login, string password) => (Login, Password) = (login, password);
 
-        public static bool operator ==(Users first, Users second) => first.Login.Equals(second.Login) && first.Password.Equals(second.Password);
+        public override int GetHashCode() => (Login + Password).GetHashCode();
 
-        public static bool operator !=(Users first, Users second) => !first.Login.Equals(second.Login) || !first.Password.Equals(second.Password);
+        public bool Equals(IUser other) => GetHashCode().Equals(other.GetHashCode());
     }
 }

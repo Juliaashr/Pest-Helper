@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pest_Helper
 {
-    public interface IUser
+    public interface IUser : IEquatable<IUser>
     {
         string Login { get; set; }
 
